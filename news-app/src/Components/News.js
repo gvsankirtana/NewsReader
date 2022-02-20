@@ -6,14 +6,33 @@ export class News extends Component {
     super();
     this.state = {
         articles:[],
-        loading:false
+        loading:false,
+        page:1,
     };
   }
   async componentDidMount(){
-    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c29cc0b04c3e49d3978de27f30e02301"
+    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c29cc0b04c3e49d3978de27f30e02301&page=1&pageSize=20"
     let data = await fetch(url);
     let parsedData = await data.json()
     this.setState({articles:parsedData.articles})
+}
+handlePrevClick = async () =>{
+let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c29cc0b04c3e49d3978de27f30e02301&page=${this.state.page - 1}&pageSize=20`;
+let data = await fetch(url);
+let parsedData = await data.json()
+ this.setState({
+     page:this.state.page - 1,
+     articles:parsedData.articles
+ })
+}
+handleNextClick = async () => {
+    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c29cc0b04c3e49d3978de27f30e02301&page=${this.state.page + 1}&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json()
+     this.setState({
+         page:this.state.page + 1,
+         articles:parsedData.articles
+     })
 }
   render() {
     return (
@@ -30,6 +49,10 @@ export class News extends Component {
               newsUrl={element.url}/>
           </div>
         })}
+        </div>
+        <div className="container d-flex justify-content-between">
+        <button disabled={this.state.page<=1} type="button" className="btn btn-primary"onClick={this.handlePrevClick}> &larr; Previous</button>
+        <button type="button" className="btn btn-primary" onClick={this.handleNextClick}>Next &rarr;</button>
         </div>
       </div>
     );
