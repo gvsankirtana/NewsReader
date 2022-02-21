@@ -6,7 +6,7 @@ import LoadingBar from "react-top-loading-bar";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export default class App extends Component {
   pageSize = 6;
-  apiKey = 'c29cc0b04c3e49d3978de27f30e02301';
+  apiKey = process.env.REACT_APP_NEWS_API
   state = {
     progress : 0
   }
@@ -14,6 +14,7 @@ export default class App extends Component {
     this.setState({progress:progress})
   }
   render() {
+    console.log(process.env.REACT_APP_NEWS_API)
     return (
       <div>
         <Router>
