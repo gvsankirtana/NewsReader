@@ -7,7 +7,7 @@ export class NewsItems extends Component {
     return (
       <div className="my-3">
         <div className="card">
-          <span class="position-absolute top-0 start-100 translate-middle badge bg-light">
+          <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">
             {source}
           </span>
           <img
@@ -31,7 +31,7 @@ export class NewsItems extends Component {
             <a
               href={newsUrl}
               target="_blank"
-              className="btn btn-sm btn-primary"
+              className="btn btn-sm btn-dark"
             >
               Read More
             </a>
