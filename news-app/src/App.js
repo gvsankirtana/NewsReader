@@ -14,7 +14,6 @@ export default class App extends Component {
     this.setState({progress:progress})
   }
   render() {
-    console.log(process.env.REACT_APP_NEWS_API)
     return (
       <div>
         <Router>
