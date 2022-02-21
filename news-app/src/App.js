@@ -6,22 +6,19 @@ import LoadingBar from "react-top-loading-bar";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export default class App extends Component {
   pageSize = 6;
-  apiKey = process.env.REACT_APP_NEWS_API
+  apiKey = process.env.REACT_APP_NEWS_API;
   state = {
-    progress : 0
-  }
+    progress: 0,
+  };
   setProgress = (progress) => {
-    this.setState({progress:progress})
-  }
+    this.setState({ progress: progress });
+  };
   render() {
     return (
       <div>
         <Router>
           <Navbar />
-          <LoadingBar
-            color="black"
-            progress={this.state.progress}
-          />
+          <LoadingBar color="black" progress={this.state.progress} />
           <Routes>
             <Route
               exact
@@ -30,7 +27,8 @@ export default class App extends Component {
               element={
                 <News
                   pageSize={this.pageSize}
-                  setProgress = {this.setProgress} apiKey={this.apiKey}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   country="in"
                   category="general"
                 />
@@ -43,7 +41,8 @@ export default class App extends Component {
               element={
                 <News
                   pageSize={this.pageSize}
-                  setProgress = {this.setProgress} apiKey={this.apiKey}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   country="in"
                   category="business"
                 />
@@ -56,7 +55,8 @@ export default class App extends Component {
               element={
                 <News
                   pageSize={this.pageSize}
-                  setProgress = {this.setProgress} apiKey={this.apiKey}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   country="in"
                   category="entertainment"
                 />
@@ -67,10 +67,12 @@ export default class App extends Component {
               path="/health"
               key="health"
               element={
-                <News pageSize={this.pageSize} 
-                setProgress = {this.setProgress} apiKey={this.apiKey} 
-                country="in" 
-                category="health" 
+                <News
+                  pageSize={this.pageSize}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
+                  country="in"
+                  category="health"
                 />
               }
             />
@@ -81,7 +83,8 @@ export default class App extends Component {
               element={
                 <News
                   pageSize={this.pageSize}
-                  setProgress = {this.setProgress} apiKey={this.apiKey}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   country="in"
                   category="science"
                 />
@@ -92,10 +95,13 @@ export default class App extends Component {
               path="/sports"
               key="sports"
               element={
-                <News pageSize={this.pageSize} 
-                setProgress = {this.setProgress} apiKey={this.apiKey}
-                country="in" 
-                category="sports" />
+                <News
+                  pageSize={this.pageSize}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
+                  country="in"
+                  category="sports"
+                />
               }
             />
             <Route
@@ -105,7 +111,8 @@ export default class App extends Component {
               element={
                 <News
                   pageSize={this.pageSize}
-                  setProgress = {this.setProgress} apiKey={this.apiKey}
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   country="in"
                   category="technology"
                 />
