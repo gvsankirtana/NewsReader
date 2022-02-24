@@ -37,7 +37,6 @@ export class News extends Component {
     this.props.setProgress(30);
     let parsedData = await data.json();
     this.props.setProgress(70);
-    console.log(parsedData.totalResults);
     this.setState({
       articles: this.state.articles.concat(parsedData.articles),
       totalResults: parsedData.totalResults,
@@ -63,7 +62,7 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h1 className="text-center" style={{ margin: "20px 0px" }}>
+        <h1 className="text-center" style={{ margin: "70px 0px" }}>
           NewsReader - Top {this.props.category} Headlines
         </h1>
         <InfiniteScroll

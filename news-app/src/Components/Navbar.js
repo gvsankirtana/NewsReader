@@ -3,7 +3,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-danger">
           <a className="navbar-brand" href="/">
             NewsReader
           </a>
