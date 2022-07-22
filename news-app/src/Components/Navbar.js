@@ -4,7 +4,7 @@ export class Navbar extends Component {
     return (
       <div>
         <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-danger">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="/NewsReader">
             NewsReader
           </a>
           <button
@@ -21,37 +21,37 @@ export class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/NewsReader">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/business">
+                <a className="nav-link" href="/NewsReader/business">
                   Business
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/entertainment">
+                <a className="nav-link" href="/NewsReader/entertainment">
                   Entertainment
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/health">
+                <a className="nav-link" href="/NewsReader/health">
                   Health
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/science">
+                <a className="nav-link" href="/NewsReader/science">
                   Science
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/sports">
+                <a className="nav-link" href="/NewsReader/sports">
                   Sports
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/technology">
+                <a className="nav-link" href="/NewsReader/technology">
                   technology
                 </a>
               </li>

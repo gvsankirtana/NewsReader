@@ -22,7 +22,7 @@ export default class App extends Component {
           <Routes>
             <Route
               exact
-              path="/"
+              path="/NewsReader"
               key="general"
               element={
                 <News
@@ -36,7 +36,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/business"
+              path="/NewsReader/business"
               key="business"
               element={
                 <News
@@ -50,7 +50,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/entertainment"
+              path="/NewsReader/entertainment"
               key="entertainment"
               element={
                 <News
@@ -64,7 +64,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/health"
+              path="/NewsReader/health"
               key="health"
               element={
                 <News
@@ -78,7 +78,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/science"
+              path="/NewsReader/science"
               key="science"
               element={
                 <News
@@ -92,7 +92,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/sports"
+              path="/NewsReader/sports"
               key="sports"
               element={
                 <News
@@ -106,7 +106,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/technology"
+              path="/NewsReader/technology"
               key="technology"
               element={
                 <News
